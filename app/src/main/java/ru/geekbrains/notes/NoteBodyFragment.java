@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.TextView;
 
 
@@ -37,6 +38,8 @@ public class NoteBodyFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_note_body, container, false);
         TextView textViewBody = view.findViewById(R.id.body_of_note);
         TextView textViewDate = view.findViewById(R.id.date_of_note);
+        DatePicker datePicker = view.findViewById(R.id.date_picker);
+
         String[] s = getResources().getStringArray(R.array.text);
         String[] s2 = getResources().getStringArray(R.array.date);
         textViewBody.setText(s[index]);
