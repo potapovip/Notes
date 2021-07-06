@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="cities">
-        <item>Москва</item>
-        <item>Санкт-Петербург</item>
-        <item>Екатеринбург</item>
-        <item>Новосибирск</item>
-        <item>Самара</item>
+    <string-array name="names">
+        <item>Список покупок</item>
+        <item>DeathNote</item>
+        <item>Who let the dogs out?</item>
+        <item>Whatever note</item>
+        <item>Whanna procrastinate?</item>
     </string-array>
-
+    <string-array name="text">
+        <item>Колбаса, сыр, гуакомоле</item>
+        <item>Кукашенко, Пупин, Дайбен</item>
+        <item>woof, woof, woof, woof</item>
+        <item>Whatever body</item>
+        <item>Pikabu.ru</item>
+    </string-array>
+    <string-array name="date">
+        <item>07.07.2021</item>
+        <item>xx.xx.xxxx</item>
+        <item>1 january 1987</item>
+        <item>Whatever date</item>
+        <item>=)</item>
+    </string-array>
 </resources>
