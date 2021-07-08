@@ -39,7 +39,6 @@ public class NoteBodyFragment extends Fragment {
         TextView textViewBody = view.findViewById(R.id.body_of_note);
         TextView textViewDate = view.findViewById(R.id.date_of_note);
         DatePicker datePicker = view.findViewById(R.id.date_picker);
-
         String[] s = getResources().getStringArray(R.array.text);
         String[] s2 = getResources().getStringArray(R.array.date);
         textViewBody.setText(s[index]);

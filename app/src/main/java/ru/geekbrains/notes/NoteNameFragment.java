@@ -22,7 +22,7 @@ public class NoteNameFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
         if (isLandscape) {
-            showLandCoatOfArms(0);
+            showLandName(0);
         }
     }
 
@@ -50,9 +50,9 @@ public class NoteNameFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     if (isLandscape) {
-                        showLandCoatOfArms(FINAL_I);
+                        showLandName(FINAL_I);
                     } else {
-                        showPortCoatOfArms(FINAL_I);
+                        showPortName(FINAL_I);
                     }
 
                 }
@@ -61,13 +61,13 @@ public class NoteNameFragment extends Fragment {
         }
     }
 
-    private void showPortCoatOfArms(int finalI) {
+    private void showPortName(int finalI) {
         Intent intent = new Intent(getActivity(), NoteBodyPortActivity.class);
         intent.putExtra(NoteBodyFragment.KEY_INDEX, finalI);
         startActivity(intent);
     }
 
-    private void showLandCoatOfArms(int index) {
+    private void showLandName(int index) {
         NoteBodyFragment coatOfArmsFragment = NoteBodyFragment.newInstance(index);
         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.name_of_note_land_container, coatOfArmsFragment).commit();
     }
