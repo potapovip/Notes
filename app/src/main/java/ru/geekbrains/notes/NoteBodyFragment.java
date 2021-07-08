@@ -31,6 +31,12 @@ public class NoteBodyFragment extends Fragment {
         if (getArguments() != null) {
             index = getArguments().getInt(KEY_INDEX);
         }
+
+        ParamManager paramManager = (ParamManager) getActivity();
+        if(paramManager != null) {
+            paramManager.setParam(9);
+            int param = paramManager.getParam();
+        }
     }
 
     @Override

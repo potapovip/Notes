@@ -15,21 +15,9 @@ import android.widget.TextView;
 
 public class NoteNameFragment extends Fragment {
 
-    private boolean isLandscape;
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
-        if (isLandscape) {
-            showLandName(0);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         return inflater.inflate(R.layout.fragment_note_name, container, false);
     }
 
@@ -49,12 +37,7 @@ public class NoteNameFragment extends Fragment {
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (isLandscape) {
-                        showLandName(FINAL_I);
-                    } else {
                         showPortName(FINAL_I);
-                    }
-
                 }
             });
             linearLayout.addView(textView);
@@ -67,11 +50,6 @@ public class NoteNameFragment extends Fragment {
         startActivity(intent);
     }
 
-    private void showLandName(int index) {
-        NoteBodyFragment coatOfArmsFragment = NoteBodyFragment.newInstance(index);
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.name_of_note_land_container, coatOfArmsFragment).commit();
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +57,4 @@ public class NoteNameFragment extends Fragment {
 
         }
     }
-
-
 }
